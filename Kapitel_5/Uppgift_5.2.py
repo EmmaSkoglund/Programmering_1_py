@@ -9,27 +9,33 @@ print('\t a / b = c ')
 print('')
 print('-' * ui_bredd)
 
-try:
-    a = input('a = ')
-    while True:
-        A = float(a)
-        break
-except ValueError:
-    print('FEL: Ogiltigt nummer ')
+while True:
+    try:
+        a = float(input('a = '))
+        if a == 0:
+            print('-' * ui_bredd)
+            print("FEL : Division med 0")
+        else:
+            break
+    except ValueError:
+        print('FEL: Ogiltigt nummer ')
+
+while True:
+    try:
+        b = float(input('b = '))
+        if b == 0:
+            print('-' * ui_bredd)
+            print('FEL : Division med 0')
+        else:
+            break
+    except ValueError:
+        print('FEL: Ogiltigt nummer ')
 
 try:
-    b = input('b = ')
-    while True:
-        B = float(b)
-        break
+    if a != 0 and b != 0:
+        kvot = a / b
+        print('-' * ui_bredd)
+        print(f' {a} / {b} = {kvot}')
 except ValueError:
     print('FEL: Ogiltigt nummer ')
-
-if A != 0 and B != 0:
-    kvot = A / B
-    print('-' * ui_bredd)
-
-print(f' {A} / {B} = {kvot}')
-
-
 
