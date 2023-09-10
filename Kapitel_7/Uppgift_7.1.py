@@ -11,7 +11,7 @@ while True:
     if os.name == 'nt':
         os.system('cls')
     else:
-            os.system('clear')
+        os.system('clear')
 
     # Skriver ut instruktioner
     print('.: basicBILLBOARD :.')
