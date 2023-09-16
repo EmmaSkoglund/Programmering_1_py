@@ -8,7 +8,7 @@ notes = {
     "Notes from lecture" : "testar..."
 }
 
-with open('notes.json','a+') as f:
+with open('notes.json', 'a+') as f:
     try:
         notes = json.loads(f.read())
     except:
